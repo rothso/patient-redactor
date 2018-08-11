@@ -83,7 +83,7 @@ class PatientRedactor(private val fileName: String) {
       addRegion("header", Rectangle(0, 40, 800, 20))
       extractRegions(document.getPage(0))
     }.run {
-      getTextForRegion("header")
+      getTextForRegion("header").trim()
     }
   }
 
